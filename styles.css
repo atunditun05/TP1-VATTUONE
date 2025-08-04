@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mi-logo{
+    margin-left: 2px;
+    width:10vw;
+}
+@media screen  (min-width: 320px;) (max-width: 767.98px){
+
+
+}
+
+@media screen  (min-width: 768px;) (max-width: 991.98px){
+
+
+}
+
+@media screen  (min-width: 992px;) (max-width: 1199.98px){
+
+
+}
