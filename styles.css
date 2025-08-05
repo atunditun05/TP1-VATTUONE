@@ -2,23 +2,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: aliceblue;
 }
-
+body{
+    background-image: linear-gradient(rgb(0,0,0), rgb(2, 0, 37), rgb(0,0,0));
+    width: 100vw;
+    width: 100dvw;
+    height: 100vw;
+    height: 100dvw;
+   background-repeat: no-repeat;
+   background-size: cover;
+   min-height: 100vh;
+   min-height: 100dvh;
+   padding: 2vw;
+   padding:2dvw;
+}
 .mi-logo{
-    margin-left: 2px;
-    width:10vw;
-}
-@media screen  (min-width: 320px;) (max-width: 767.98px){
-
-
+    width:6vw;
 }
 
-@media screen  (min-width: 768px;) (max-width: 991.98px){
-
-
+header{
+    width: 100%;
+display: grid;
+grid-template-columns: repeat(2,1fr);
 }
-
-@media screen  (min-width: 992px;) (max-width: 1199.98px){
-
-
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+}
+ul{
+    display: flex;
+flex-direction: row;
+text-decoration: none;
+    list-style-type: none;
+    gap: 2vw;
+    
 }
