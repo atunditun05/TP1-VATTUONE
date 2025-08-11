@@ -262,6 +262,39 @@ align-items: center;
 #proyectos{
 
 }
+.container{
+display: flex;
+flex-direction: column;
+gap: 3em;
+padding: 0;
+}
+a{
+    cursor: pointer;
+    width: 100%;
+}
+.card{
+    background-color: rgb(255, 175, 110);
+    display: flex;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4%;
+    border-bottom-right-radius: 4%;
+border: 1em;
+    text-decoration: none;
+}
+h4{
+     display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 2%;
+    margin: 0; 
+}
+.imgproyectos{
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
+}
   #XP {
   }
   #contactame {
