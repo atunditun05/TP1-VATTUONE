@@ -29,6 +29,13 @@ body {
   color: aliceblue;
 } 
 
+:root {
+  --color-primario: #f57b2a;
+  --color-secundario: #f8f9fa;
+  --color-terciario:#4879aa;
+  --color-cuarto:#ffb45f;
+}
+
 @media (min-width: 240px) {
   h1 {
     width: auto;
@@ -187,7 +194,7 @@ body {
 
 
   strong {
-    color: rgb(201, 97, 0);
+    color:var(--color-cuarto);
   }
  
   .quien-soy {
@@ -311,7 +318,29 @@ gap:1em;
     font-size: 0.9em;
     text-align: justify;
 }
-
+.contacto{
+  display: flex;
+  align-items:center;
+  width:100%;
+  gap:1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contacto a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+footer{
+  background-color: rgb(255, 123, 0);
+  color: aliceblue;
+  text-align: center;
+  height: 100%;
+  margin: 0;
+  padding: 0.5rem 0;
+  font-weight: bolder;
+}
 @keyframes h2{
     from{
 transform: rotateX(45deg)  translateX(-20px) scaleX(20px);
@@ -355,34 +384,59 @@ transform: rotateX(45deg)  translateX(-20px) scaleX(20px);
 
 
 @media (min-width: 768px) and (max-width: 1440px) {
-  h1 {
-    grid-column: 1;
-    grid-row: 1;
+    h1 {
     width: auto;
     height: auto;
-    font-size: 2em;
+    font-size: 3em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 1.2em;
   }
+
+  h2{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-family: montserrat;
+    font-style: oblique;
+    animation: h2 1s ease;
+    letter-spacing: 5px;
+    margin-bottom: 1em;
+}
+h3{
+  text-align: center;
+}
+ p {
+    margin-bottom: 0.3rem;
+    font-size: 1em;
+  }
+
   .mi-logo {
-    width: 7vw;
+    width: 5em;
   }
-  strong {
-    color: rgb(255, 122, 33);
-  }
+
   header {
     padding: 2vw;
     padding: 2dvw;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background-color: rgb(218, 108, 5);
+    background-color: var(--color-primario);
   }
-
   nav {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
   }
+  a {
+    color: aliceblue;
+    list-style-type: none;
+    text-decoration: none;
+    list-style: none;
+    
 
+  }
   ul {
     display: flex;
     flex-direction: row;
@@ -393,45 +447,50 @@ transform: rotateX(45deg)  translateX(-20px) scaleX(20px);
     padding-left: 0;
     margin-bottom: 0;
   }
+
   li {
-    transition: all 0.5s ease;
-  }
-  nav {
+    list-style-type: none;
+    text-decoration: none;
+    list-style: none;
     padding: 0;
     margin: 0;
+    font-size: 1.1em;
+    font-weight:550;
   }
-  li:hover {
-    transform: scale(1.2);
-  }
+
+
   main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    padding: 2vw;
-    padding: 2dvw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3vw;
+    padding: 3dvw;
   }
+
+
+  
   #teloresumo {
-    grid-row: 1;
-    grid-column: span 4;
-    display: grid;
-    margin-bottom: 3em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
   .mi-foto {
     border-radius: 50%;
   }
   .wrapper {
-    grid-row: 1;
-    grid-column: 1 / 2;
-    /* display: flex;
+    display: flex;
     align-items: center;
-    justify-content: center;*/
+    justify-content: center;
     position: relative;
-    height: 55vh;
-    height: 55dvh;
-    width: 55vw;
-    width: 55dvh;
+    height: 65vh;
+    height: 65dvh;
+    width: 65vw;
+    width: 65dvh;
     cursor: pointer;
     animation: quien-soy 1s ease;
+    padding-top: 3em;
+    margin-bottom: 2em;
   }
   .single-card {
     width: 100%;
@@ -449,7 +508,7 @@ transform: rotateX(45deg)  translateX(-20px) scaleX(20px);
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background-image: url(/images/valentin-vattuone.jpg);
+    background-image: url(images/valentin-vattuone.jpg);
     background-size: cover;
     border-radius: 50%;
     color: rgb(21, 6, 77);
@@ -471,7 +530,7 @@ transform: rotateX(45deg)  translateX(-20px) scaleX(20px);
     justify-content: center;
     align-items: center;
     gap: 0;
-    font-size: 90%;
+    font-size: 100%;
     padding: 20%;
     font-family: monospace;
   }
@@ -484,31 +543,174 @@ transform: rotateX(45deg)  translateX(-20px) scaleX(20px);
     gap: 0.5em;
   }
 
-  p {
-    margin-bottom: 0.3rem;
+
+
+
+
+
+  strong {
+    color:var(--color-cuarto);
   }
+ 
   .quien-soy {
     display: flex;
-    align-items: center;
+width: 50%;
     grid-row: 1;
     grid-column: 3;
     justify-self: end;
-    padding-left: 1em;
     margin-top: 3em;
-    animation: presentacion 2s ease;
-  }
-  #skills {
-    display: grid;
-    grid-row: 2;
-    grid-column: span 4;
-  }
-  #XP {
-    grid-row: 4;
-  }
-  #contactame {
-    grid-row: 5;
+    animation: presentacion 3s ease;
   }
 
+  .design-pack{
+    display: grid;
+    align-items:center ;
+    justify-items:center;
+    padding: 1em;
+    background-color:#4879aa7e;
+    border-radius: 5px;
+    border:0.2em solid var(--color-primario);
+    margin-top: 1em;
+     margin-bottom: 2em;
+
+  }
+
+
+  .img-ill{
+grid-area: 1/3;
+width:9vw;
+width:9dvw;
+  }
+    .img-psd{
+grid-area: 2/2;
+width:9vw;
+width:9dvw;
+  }
+      .img-pr{
+grid-area: 2/4;
+width:9vw;
+width:9dvw;
+  }
+        .img-ae{
+grid-area: 3/1;
+width:9vw;
+width:9dvw;
+  }
+  .img-id{
+    grid-area: 3/3;
+width:9vw;
+width:9dvw;
+  }
+  .img-lr{
+        grid-area: 3/5;
+width:9vw;
+width:9dvw;
+  }
+  i{
+    font-size: 12vw;
+    font-size: 12vw;
+  }
+  
+  .front-pack{
+    padding: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+    .soft-skills{
+display: flex;
+align-items: center;
+    gap: 2em;
+    margin-bottom: 1em;
+    font-weight: bolder;
+  }
+.soft-skills i{
+    font-size: 8vw;
+}
+
+.container{
+display: flex;
+flex-direction: column;
+gap: 3em;
+padding: 0;
+}
+a{
+    cursor: pointer;
+    width: 100%;
+}
+.card{
+    background-color: rgb(255, 175, 110);
+    display: flex;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4%;
+    border-bottom-right-radius: 4%;
+border: 1em;
+    text-decoration: none;
+}
+h4{
+     display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 2%;
+    margin: 0; 
+}
+.imgproyectos{
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
+}
+.experiencias{
+width: 100%;
+display: flex;
+flex-direction: column;
+ align-items: center;
+    justify-content: center;
+padding: 2%;
+gap:1em;
+}
+.imgexp{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.textoxp{
+    font-size: 0.9em;
+    text-align: justify;
+}
+.contacto{
+  display: flex;
+  align-items:center;
+  width:100%;
+  gap:1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contacto a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+footer{
+  background-color: rgb(255, 123, 0);
+  color: aliceblue;
+  text-align: center;
+  height: 100%;
+  margin: 0;
+  padding: 0.5rem 0;
+  font-weight: bolder;
+}
+@keyframes h2{
+    from{
+transform: rotateX(45deg)  translateX(-20px) scaleX(20px);
+
+    }
+    to{
+        transform:  rotateX(0deg) translateX(0px) scaleX(0px);
+    }
+}
   @keyframes quien-soy {
     from {
       opacity: 0;
@@ -529,4 +731,6 @@ transform: rotateX(45deg)  translateX(-20px) scaleX(20px);
       transform: translateX(0em);
     }
   }
+
+
 }
