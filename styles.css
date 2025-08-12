@@ -38,6 +38,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-top: 1.5em;
   }
 
   h2{
@@ -109,7 +110,6 @@ body {
 
   
   #teloresumo {
-    margin-bottom: 3em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -259,9 +259,7 @@ align-items: center;
 .soft-skills i{
     font-size: 8vw;
 }
-#proyectos{
 
-}
 .container{
 display: flex;
 flex-direction: column;
@@ -295,10 +293,25 @@ h4{
   border-bottom-left-radius: 3%;
     border-bottom-right-radius: 3%;
 }
-  #XP {
-  }
-  #contactame {
-  }
+.experiencias{
+width: 100%;
+display: flex;
+flex-direction: column;
+ align-items: center;
+    justify-content: center;
+padding: 2%;
+gap:1em;
+}
+.imgexp{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.textoxp{
+    font-size: 0.9em;
+    text-align: justify;
+}
+
 @keyframes h2{
     from{
 transform: rotateX(45deg)  translateX(-20px) scaleX(20px);
